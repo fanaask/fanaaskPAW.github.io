@@ -13,5 +13,5 @@
 /.phpunit.cache/
 ###< phpunit/phpunit ###
 
-# PhpStorm / IntelliJ IDE
+# PhpStorm / IntelliJ IDEA
 .idea/
