@@ -1,0 +1,63 @@
+App\Entity\Location:
+    properties:
+        city:
+            - NotBlank:
+                  groups: [create, edit]
+            - Length:
+                  min: 2
+                  max: 100
+                  groups: [create, edit]
+
+        latitude:
+            - NotBlank:
+                  groups: [create, edit]
+            - Range:
+                  min: -90
+                  max: 90
+                  groups: [create, edit]
+
+        longitude:
+            - NotBlank:
+                  groups: [create, edit]
+            - Range:
+                  min: -180
+                  max: 180
+                  groups: [create, edit]
+
+App\Entity\Forecast:
+    properties:
+        date:
+            - NotNull:
+                  groups: [create, edit]
+
+        temperature:
+            - NotNull:
+                  groups: [create, edit]
+            - Range:
+                  min: -100
+                  max: 100
+                  groups: [create, edit]
+
+        pressure:
+            - NotNull:
+                  groups: [create, edit]
+            - Range:
+                  min: 800
+                  max: 1200
+                  groups: [create, edit]
+
+        wind:
+            - NotNull:
+                  groups: [create, edit]
+            - Range:
+                  min: 0
+                  max: 400
+                  groups: [create, edit]
+
+        humidity:
+            - NotNull:
+                  groups: [create, edit]
+            - Range:
+                  min: 0
+                  max: 1
+                  groups: [create, edit]
